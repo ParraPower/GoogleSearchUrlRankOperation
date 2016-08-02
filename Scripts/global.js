@@ -1,0 +1,1 @@
+﻿var siteUrl = location.host;
