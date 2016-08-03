@@ -1,0 +1,26 @@
+﻿@model GoogleSearchUrlRankOperation.Models.GoogleSearchRequest
+@{
+    ViewBag.Title = "Search Panel";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("HandleForm", "Search" , FormMethod.Post, new { id = "mvcNetForm" }))
+{
+    <fieldset class="form-group">
+        @Html.LabelFor(model => model.SearchTerms)
+        @Html.TextBoxFor(model => model.SearchTerms, new { @class = "form-control", @placeholder = "e.g. Infotrack REVEAL VOI" })
+        
+
+    </fieldset>
+    <fieldset class="form-group">
+        @Html.LabelFor(model => model.UrlToFind)
+        @Html.TextBoxFor(model => model.UrlToFind, new { @class = "form-control", @placeholder = "e.g. www.infotrack.com.au" })
+        
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Controllers/search.js"></script>
+}

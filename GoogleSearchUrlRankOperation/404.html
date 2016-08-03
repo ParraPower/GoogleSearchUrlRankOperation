@@ -1,0 +1,12 @@
+﻿<html>
+<body onload="redirectAfterThreeSeconds()">
+    <p>This page no longer exists. Redirecting to home page </p>
+    <script type="text/javascript">
+        function redirectAfterThreeSeconds() {
+            setTimeout(function () {
+                location.href =  location.origin;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
